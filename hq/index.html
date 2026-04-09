@@ -1,1 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>River North HQ</title>
+  <style>
+    :root {
+      --bg:#0b1220;
+      --panel:rgba(15,23,42,.86);
+      --line:rgba(255,255,255,.08);
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+      --accent:#dbeafe;
+      --gold:#f5deb3;
+      --green:#86efac;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      font-family:Inter,Arial,sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#0b1220 0%,#090d16 60%,#05070c 100%);
+    }
+    .wrap { max-width:1100px; margin:0 auto; padding:32px 18px 120px; }
+    .hero,.card {
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 24px 60px rgba(0,0,0,.28);
+    }
+    .hero { margin-bottom:18px; }
+    .eyebrow {
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:12px;
+      margin-bottom:14px;
+    }
+    h1 { margin:0 0 10px; font-size:44px; line-height:1.03; }
+    p { color:var(--muted); margin:0; }
+    .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:18px 0; }
+    .big { font-size:30px; margin:0 0 8px; }
+    .label { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:12px; margin-bottom:10px; }
+    .two { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .row {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:12px 14px;
+      margin-top:10px;
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px;
+      background:rgba(255,255,255,.02);
+    }
+    .status { color:var(--muted); font-size:14px; }
+    .live::before {
+      content:"";
+      display:inline-block;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--green);
+      margin-right:8px;
+      box-shadow:0 0 10px var(--green);
+      vertical-align:middle;
+    }
+    @media (max-width:900px){ .grid,.two{grid-template-columns:1fr 1fr;} }
+    @media (max-width:640px){ h1{font-size:34px;} .grid,.two{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">River North HQ / Night View</div>
+      <h1>Quiet control, sharp edges, real movement.</h1>
+      <p>A clean executive dashboard for BrightFrame Media. Minimal numbers, dark NYC office vibe, clear signals only.</p>
+    </section>
 
+    <section class="grid">
+      <div class="card"><div class="label">Brand</div><div class="big">Ready</div><p>Domain secured, email live, homepage drafted.</p></div>
+      <div class="card"><div class="label">Offer</div><div class="big">Locked</div><p>Short-form content system, pilot at $500 to $750.</p></div>
+      <div class="card"><div class="label">Outreach</div><div class="big">2 Live</div><p>Two outbound emails are active right now.</p></div>
+      <div class="card"><div class="label">Queue</div><div class="big">4 Ready</div><p>More prospects lined up without clutter.</p></div>
+    </section>
+
+    <section class="two">
+      <div class="card">
+        <div class="label">Live Signal</div>
+        <div class="row"><span>Boston Medical Aesthetics</span><span class="status live">contacted</span></div>
+        <div class="row"><span>Vega Vitality</span><span class="status live">contacted</span></div>
+      </div>
+
+      <div class="card">
+        <div class="label">On Deck</div>
+        <div class="row"><span>Rejuv Health Spa</span><span class="status">ready</span></div>
+        <div class="row"><span>Miami Med SPA</span><span class="status">ready</span></div>
+        <div class="row"><span>QC Medispa</span><span class="status">ready</span></div>
+        <div class="row"><span>Georgetown Allure Med Spa</span><span class="status">ready</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
